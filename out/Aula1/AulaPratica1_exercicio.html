@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Resumo de comandos.md</title>
+<title>AulaPratica1_exercicio.md</title>
 
 <!-- official styles start -->
 <!-- markdown.css -->
@@ -21,36 +21,17 @@
 </head>
 <body class="markdown-body vscode-body vscode-light">
 <div class="content">
-    <a for="toc-anchor" id="criar-namespace%3A"></a><h2 id="criar-namespace" data-line="0" class="code-line">Criar namespace:</h2>
-<pre><code data-line="1" class="code-line language-bash"><div>kubectl create namespace &lt;nome-do-namespace&gt;
-</div></code></pre>
-<a for="toc-anchor" id="aplicar-um-arquivo-no-formato-yaml-no-cluster"></a><h2 id="aplicar-um-arquivo-no-formato-yaml-no-cluster" data-line="5" class="code-line">Aplicar um arquivo no formato yaml no cluster</h2>
-<pre><code data-line="6" class="code-line language-bash"><div>kubectl apply -f &lt;nome-do-arquivo&gt;
-</div></code></pre>
-<a for="toc-anchor" id="listar-os-pods-de-um-namespace"></a><h2 id="listar-os-pods-de-um-namespace" data-line="10" class="code-line">Listar os pods de um namespace</h2>
-<pre><code data-line="11" class="code-line language-bash"><div>kubectl get pods -n &lt;nome-do-namespace&gt;
-</div></code></pre>
-<a for="toc-anchor" id="deletar-um-pod"></a><h2 id="deletar-um-pod" data-line="15" class="code-line">Deletar um pod</h2>
-<pre><code data-line="16" class="code-line language-bash"><div>kubectl delete -f &lt;nome-do-arquivo&gt;
-</div></code></pre>
-<p data-line="19" class="code-line">ou</p>
-<pre><code data-line="20" class="code-line language-bash"><div>kubectl delete pod &lt;nome-do-pod&gt; -n &lt;nome-do-namespace&gt;
-</div></code></pre>
-<a for="toc-anchor" id="descrever-um-pod-ou-qualquer-outro-objeto-do-kubernetes"></a><h2 id="descrever-um-pod-ou-qualquer-outro-objeto-do-kubernetes" data-line="24" class="code-line">Descrever um pod ou qualquer outro objeto do kubernetes</h2>
-<pre><code data-line="25" class="code-line language-bash"><div>kubectl describe pod &lt;nome-do-pod&gt; -n &lt;nome-do-namespace&gt;
-</div></code></pre>
-<a for="toc-anchor" id="logar-dentro-de-um-container-com-um-s%C3%B3-container"></a><h2 id="logar-dentro-de-um-container-com-um-s%C3%B3-container" data-line="29" class="code-line">Logar dentro de um container com um só container</h2>
-<pre><code data-line="30" class="code-line language-bash"><div>kubectl <span class="hljs-built_in">exec</span> -ti &lt;nome-do-pod&gt; -n &lt;nome-do-namespace&gt; sh
-</div></code></pre>
-<a for="toc-anchor" id="logar-dentro-de-um-container-com-mais-de-um-container"></a><h2 id="logar-dentro-de-um-container-com-mais-de-um-container" data-line="34" class="code-line">Logar dentro de um container com mais de um container</h2>
-<pre><code data-line="35" class="code-line language-bash"><div>kubectl <span class="hljs-built_in">exec</span> -ti &lt;nome-do-pod&gt; -c &lt;nome-do-container&gt; -n &lt;nome-do-namespace&gt; sh
-</div></code></pre>
-<a for="toc-anchor" id="verificar-os-logs-de-um-pod-com-um-s%C3%B3-container"></a><h2 id="verificar-os-logs-de-um-pod-com-um-s%C3%B3-container" data-line="38" class="code-line">Verificar os logs de um pod com um só container</h2>
-<pre><code data-line="39" class="code-line language-bash"><div>kubectl logs -f &lt;nome-do-pod&gt; -n &lt;nome-do-namespace&gt; 
-</div></code></pre>
-<a for="toc-anchor" id="verificar-os-logs-de-um-pod-com-um-s%C3%B3-container"></a><h2 id="verificar-os-logs-de-um-pod-com-um-sc3b3-container-1" data-line="43" class="code-line">Verificar os logs de um pod com um só container</h2>
-<pre><code data-line="44" class="code-line language-bash"><div>kubectl logs -f &lt;nome-do-pod&gt; -c &lt;nome-do-container&gt; -n &lt;nome-do-namespace&gt; 
-</div></code></pre>
+    <ol>
+<li data-line="0" class="code-line">Criar um namespace &quot;exercicio&quot; de forma imperativa</li>
+<li data-line="1" class="code-line">Criar um pod com o nome &quot;pod-apache&quot; baseado na imagem do apache no namespace &quot;exercicio&quot; de forma declarativa</li>
+<li data-line="2" class="code-line">Utilizar a ferramenta de describe do kubernetes pra obter detalhes do pod recém criado</li>
+<li data-line="3" class="code-line">Criar um novo pod com o nome &quot;pod-apache-2&quot; no namespace &quot;exercicio&quot;.</li>
+<li data-line="4" class="code-line">Logar no pod &quot;pod-apache&quot; e verificar se o serviço está escutando na porta 80 com o comando curl
+5.1  Instalar o curl dentro do container
+apt-get update &amp;&amp; apt-get install curl</li>
+<li data-line="7" class="code-line">Tentar acessar o outro pod(pod-apache-2) na porta 80 utilizando o comando curl</li>
+<li data-line="8" class="code-line">Definir um liveness probe do tipo http para o container &quot;pod-apache&quot;</li>
+</ol>
 </div>
 
 </body>
