@@ -1,5 +1,5 @@
-# Curso de kubernetes básico
-Arquivos utilizados durante as aulas e disponibilizados para os alunos
+# Curso de kubernetes básico utilizando o minikube
+Arquivos criados durante as aulas e disponibilizados para os alunos
 
 ## Comandos utilizados com frequência no curso
 
