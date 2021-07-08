@@ -46,7 +46,7 @@ kubectl exec -ti <nome-do-pod> -c <nome-do-container> -n <nome-do-namespace> sh
 kubectl logs -f <nome-do-pod> -n <nome-do-namespace> 
 ~~~
 
-## Verificar os logs de um pod com um só container
+## Verificar os logs de um pod com mais de um container
 ~~~bash
 kubectl logs -f <nome-do-pod> -c <nome-do-container> -n <nome-do-namespace> 
 ~~~
