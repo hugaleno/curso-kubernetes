@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: apache-pod
+  namespace: servicos
+  labels:
+    app: apache
+spec:
+  containers:
+    - name: container-apache
+      image: httpd:latest
