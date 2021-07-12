@@ -50,3 +50,24 @@ kubectl logs -f <nome-do-pod> -n <nome-do-namespace>
 ~~~bash
 kubectl logs -f <nome-do-pod> -c <nome-do-container> -n <nome-do-namespace> 
 ~~~
+
+## Expor um servico pelo minikube
+~~~bash
+minikube service <nome-do-servico> -n <nome-do-namespace>
+~~~
+
+## Habilitar addon do ingresso no minikube
+~~~bash
+minikube addons enable ingress
+~~~
+
+
+## Documentações
+Nginx Ingress
+~~~bash
+https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/
+~~~
+Kubernetes
+~~~bash
+https://kubernetes.io/docs/reference/kubernetes-api/
+~~~

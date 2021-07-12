@@ -1,12 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: svc-apache-clusterip
+  name: svc-apache-nodeport
   namespace: servicos
 spec:
   selector:
     app: apache
+  type: NodePort
   ports:
-    - port: 8080
+    - port: 80
       targetPort: 80
-  type: ClusterIP
+      nodePort: 30000
