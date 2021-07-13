@@ -17,3 +17,10 @@ spec:
                 name: svc-pod-web
                 port:
                   number: 8080
+          - path: /v2
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-pod-web-v2
+                port:
+                  number: 8080

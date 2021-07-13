@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-web-v2
+  namespace: servicos
+  labels:
+    app: pod-web-v2
+spec:
+  containers:
+    - name: container-web-v2
+      image: gcr.io/google-samples/hello-app:2.0
+      ports:
+        - containerPort: 8080
