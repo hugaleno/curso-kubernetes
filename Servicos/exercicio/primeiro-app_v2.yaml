@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: primeiro-app-v2
+  namespace: exercicio2
+  labels:
+    app: primeiro-app-nodejs-v2
+spec:
+  containers:
+    - name: primeiroapp-container
+      image: hugaleno/kub-firstapp:v2
+      ports:
+        - containerPort: 8080
